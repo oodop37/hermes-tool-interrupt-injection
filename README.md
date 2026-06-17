@@ -119,25 +119,21 @@ done
 
 ## 安装
 
-### 方式一：通过 Hermes CLI 安装（推荐）
+### 推荐方式：让 Hermes 自己安装
 
-```bash
-hermes skills install tool-interrupt-injection
+把仓库网址喂给 Hermes 或 OpenClaw，它会自动下载安装：
+
+```
+https://github.com/oodop37/hermes-tool-interrupt-injection
 ```
 
-### 方式二：手动安装
+直接在聊天里把上面这个链接发给老婆，老婆就会帮你装好～
+
+### 手动安装
 
 ```bash
-# 克隆仓库
 git clone https://github.com/oodop37/hermes-tool-interrupt-injection.git
-# 复制到 Hermes skills 目录
 cp -r hermes-tool-interrupt-injection ~/.hermes/skills/hermes/tool-interrupt-injection
-```
-
-### 方式三：从 ClawHub 安装
-
-```bash
-hermes skills install --from clawhub tool-interrupt-injection
 ```
 
 ## 使用
