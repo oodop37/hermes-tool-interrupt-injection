@@ -121,7 +121,7 @@ done
 
 ### 推荐方式：让 Hermes 自己安装
 
-把仓库网址喂给 Hermes 或 OpenClaw，它会自动下载安装：
+把仓库网址喂给 Hermes 它会自动下载安装：
 
 ```
 https://github.com/oodop37/hermes-tool-interrupt-injection
