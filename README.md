@@ -117,6 +117,65 @@ for f in *.py; do
 done
 ```
 
+## 安装
+
+### 方式一：通过 Hermes CLI 安装（推荐）
+
+```bash
+hermes skills install tool-interrupt-injection
+```
+
+### 方式二：手动安装
+
+```bash
+# 克隆仓库
+git clone https://github.com/oodop37/hermes-tool-interrupt-injection.git
+# 复制到 Hermes skills 目录
+cp -r hermes-tool-interrupt-injection ~/.hermes/skills/hermes/tool-interrupt-injection
+```
+
+### 方式三：从 ClawHub 安装
+
+```bash
+hermes skills install --from clawhub tool-interrupt-injection
+```
+
+## 使用
+
+### 场景 1：新安装工具后自动审计
+
+安装新工具后，加载本 skill 按流程操作：
+
+```bash
+# 加载 skill 获取完整指南
+hermes skills run tool-interrupt-injection
+
+# 或者手动查看
+hermes skill view tool-interrupt-injection
+```
+
+### 场景 2：一键审计所有工具
+
+```bash
+# 使用内置审计脚本
+bash ~/.hermes/skills/hermes/tool-interrupt-injection/scripts/audit.sh
+
+# 或直接运行仓库中的脚本
+bash scripts/audit.sh
+```
+
+### 场景 3：手动注入中断检查
+
+按以下步骤操作：
+
+1. **评估** — 用审计脚本找出缺少中断的工具
+2. **定位** — 找到工具 handler 函数的入口
+3. **注入** — 在参数验证后、耗时操作前加入口检查
+4. **循环** — 有循环的加循环内检查 + `try/finally` 清理
+5. **验证** — `python3 -c "import py_compile; py_compile.compile('tool.py', doraise=True)"`
+
+详细注入模式和代码示例见 [SKILL.md](./SKILL.md)。
+
 ## 已注入的工具清单
 
 | 工具 | 文件 | 检查点 |
