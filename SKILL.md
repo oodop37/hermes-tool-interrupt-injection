@@ -215,3 +215,10 @@ export HERMES_DEBUG_INTERRUPT=1
 - `tools/registry.py` — 工具注册表，`tool_error` 和 `tool_result` 辅助函数
 - `agent/tool_executor.py` — 工具执行器，并发执行和中断传播
 - `run_agent.py` — `AIAgent.interrupt()` 方法
+
+## 开源仓库
+
+此 skill 的完整代码和文档已开源：
+
+- **GitHub**: [oodop37/hermes-tool-interrupt-injection](https://github.com/oodop37/hermes-tool-interrupt-injection)
+- 包含：SKILL.md（完整注入指南）、README.md（项目说明）、scripts/audit.sh（审计脚本）
